@@ -15,7 +15,7 @@
 
 | Requirement ID | Requirement Description | Test Oracle (Expected Behavior) |
 |-----------------------|-----------------------------------|---------------------------------------------|
-| FR-1                   | The system shall ………..| After adding "Buy milk"................|
-| FR-2                   | The system shal…. ……..| After deleting `"Buy milk".............|
-| NFR-1                | The system shall………... | When…………..within 1 second. |
-| FR-4                   | ……..                                |............                                         |
+| FR-X                   | The system shall ………..| When using a sorting method on a list of values, the method should return a properly sorted list of those exact same values.|
+| FR-X                  | The system shal…. ……..| When graphical displays are asked for, open up turtle.py and draw a visual display.|
+| NFR-X              | The system shall………... |All implemented algorithms must have either a short text explaining their purpose or a link to a source that does.|
+| FR-X                  | ……..                                |All algorithms should have the same possible parameters that their real life counterparts would require.|
