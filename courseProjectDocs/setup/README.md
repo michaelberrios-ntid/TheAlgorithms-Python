@@ -1,5 +1,7 @@
 # How to Run Tests
 
+> **Environment Requirement:** These instructions are intended for a Linux environment, specifically Ubuntu. The setup and test execution have been successfully verified on native Ubuntu. Windows users should use Ubuntu through Windows Subsystem for Linux (WSL). Running the tests directly through PowerShell or Git Bash has not been verified.
+
 ### 1. Install uv
 
 ```bash
