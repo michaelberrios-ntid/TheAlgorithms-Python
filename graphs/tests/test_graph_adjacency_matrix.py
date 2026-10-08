@@ -4,14 +4,14 @@ from graphs.graph_adjacency_matrix import GraphAdjacencyMatrix
 
 # Tests incorrect value handling
 def test_matrix_creation():
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError, match=r"must have length 2"):
         matrix = GraphAdjacencyMatrix(edges = [[1,2,3]])
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError, match=r"must have length 2"):
         matrix = GraphAdjacencyMatrix(edges = [[1]])
 
 # Test incorrect value catching in adding edge
 def test_edge_addition():
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError, match=r"Either"):
         matrix = GraphAdjacencyMatrix()
         matrix.add_edge(1, 2)
     #Directed
