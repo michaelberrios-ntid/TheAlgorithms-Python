@@ -8,12 +8,15 @@ Based on the previous coverage report, files with lower coverage were investigat
 ## Graph Adjacency Matrix Test
  Tests located in graphs/tests/test_graph_adjacency_matrix.py
  
-I noticed that the handling of exceptions was not tested for correctness, so I added some for certain methods:
-* Constructor
-* add_edge
-* remove_edge
+ Before, graph_adjacency_matrix.py already had a test method, TestGraphMatrix. However, it and its test methods were designed to be run specifically, and are not compatible with pytest.
 
-These tests utilize pytest in order to check if the exceptions have been handled properly
+ I have created pytest compatible tests that test some of the same behaviors
+ Namely:
+ * Initialization exception handling
+ * Edge addition/removal exception handling
+ * Vertex addition/removal exception handling
+
+In the future, it may be useful to add more pytest compatible coverage.
 
 ## Binary Search
 I noticed that the binary_search_with_duplicates() method contained its own definitions of lower_bound() and upper_bound().
