@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-9.1.1, pluggy-1.6.0
+rootdir: /home/mberrios/code/swen-777/TheAlgorithms-Python
+configfile: pyproject.toml
+plugins: cov-7.1.0, anyio-4.14.2
+collected 8 items
+
+financial/interest.py ...                                                [ 37%]
+financial/tests/test_interest.py .....                                   [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                    Stmts   Miss  Cover   Missing
+-----------------------------------------------------
+financial/interest.py      28      2    93%   118-120
+-----------------------------------------------------
+TOTAL                      28      2    93%
+============================= slowest 10 durations =============================
+
+(10 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 8 passed in 0.05s ===============================
