@@ -278,6 +278,16 @@ def binary_search_with_duplicates(sorted_collection: list[int], item: int) -> li
         :param sorted_collection: The sorted list to search.
         :param item: The item to find the lower bound for.
         :return: The index where the item can be inserted while maintaining order.
+
+        Examples:
+        >>> lower_bound([1,2,3], 1)
+        0
+        >>> lower_bound([0,1,2,3], 2)
+        2
+        >>> lower_bound([1,2,3,10], 9)
+        3
+        >>> lower_bound([1,2,3,4], 10)
+        4
         """
         left = 0
         right = len(sorted_collection)
@@ -297,6 +307,16 @@ def binary_search_with_duplicates(sorted_collection: list[int], item: int) -> li
         :param sorted_collection: The sorted list to search.
         :param item: The item to find the upper bound for.
         :return: The index where the item can be inserted after all existing instances.
+
+        Examples:
+        >>> upper_bound([1,2,3,4], 4)
+        4
+        >>> upper_bound([1,2,3,4], 1)
+        1
+        >>> upper_bound([1,2,3,4], 2)
+        2
+        >>> upper_bound([1,2,3,10], 9)
+        3
         """
         left = 0
         right = len(sorted_collection)
