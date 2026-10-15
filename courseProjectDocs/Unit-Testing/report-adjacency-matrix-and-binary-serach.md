@@ -18,6 +18,14 @@ Based on the previous coverage report, files with lower coverage were investigat
 
 In the future, it may be useful to add more pytest compatible coverage.
 
+# Coverage Update
+| Version | Statements | Missing Stmts | Branches | Partial Branches | Coverage |
+| ------- | ------- | ------- | ------- | ------- | ------- |
+| Old | 260 | 13 | 102 | 6 | 95% |
+| New | 260 | 7 | 102 | 3 | 97% |
+
+The additional tests led to a 2% improvement in coverage.
+
 ## Binary Search
 I noticed that the binary_search_with_duplicates() method contained its own definitions of lower_bound() and upper_bound().
 
