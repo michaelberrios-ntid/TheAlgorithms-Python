@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-9.1.1, pluggy-1.6.0
+rootdir: /home/mberrios/code/swen-777/TheAlgorithms-Python
+configfile: pyproject.toml
+plugins: cov-7.1.0, anyio-4.14.2
+collected 1 item
+
+conversions/binary_to_decimal.py .                                       [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                               Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------------------
+conversions/binary_to_decimal.py      16      2     10      1    88%   41-43
+------------------------------------------------------------------------------
+TOTAL                                 16      2     10      1    88%
+============================= slowest 10 durations =============================
+
+(3 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 1 passed in 0.03s ===============================
