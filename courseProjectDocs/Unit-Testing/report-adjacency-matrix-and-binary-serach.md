@@ -1,4 +1,4 @@
-# New Test Cases
+# New Test Cases for graph_adjacency_matrix.py and binary_search.py
 
 author: Daniel Arcega
 
