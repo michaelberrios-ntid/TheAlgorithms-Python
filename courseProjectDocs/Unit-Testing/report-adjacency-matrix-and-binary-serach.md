@@ -29,4 +29,10 @@ The additional tests led to a 2% improvement in coverage.
 ## Binary Search
 I noticed that the binary_search_with_duplicates() method contained its own definitions of lower_bound() and upper_bound().
 
-I added inline doctests to cover their logic. Namely, do they return the correct index when the first is valid, when there are no valid ideces, etc.
+I added inline doctests to cover their logic. The tests were based on boundary value analysis, covering the max/min values as well as their predecessors.
+
+Due to the way the coverage statistics are gathered, the only change in the coverage is reducing the number of missing lines.
+| Version | Statements | Missing Stmts | Branches | Partial Branches | Coverage |
+| ------- | ------- | ------- | ------- | ------- | ------- |
+| Old and New | 118 | 25 | 60 | 8 | 78% |
+
