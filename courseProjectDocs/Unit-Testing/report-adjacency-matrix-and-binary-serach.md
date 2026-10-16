@@ -5,6 +5,9 @@ author: Daniel Arcega
 ## Rationale
 Based on the previous coverage report, files with lower coverage were investigated to find potential unit test locations.
 
+## Test Results
+Of the 5 tests run, 5 tests pass.
+
 ## Graph Adjacency Matrix Test
  Tests located in graphs/tests/test_graph_adjacency_matrix.py
  
