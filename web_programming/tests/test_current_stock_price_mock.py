@@ -2,6 +2,8 @@ from unittest.mock import Mock, patch
 
 from web_programming.current_stock_price import stock_price
 
+import pytest
+import httpx
 
 def test_stock_price_success():
     html = '<html><span data-testid="qsp-price">228.43</span></html>'
@@ -53,6 +55,29 @@ def test_stock_price_default_symbol():
         result = stock_price() # << no symbol provided
 
     assert result == "228.43"
+
+    mock_get.assert_called_once_with(
+        "https://finance.yahoo.com/quote/AAPL?p=AAPL",
+        headers={"USER-AGENT": "Mozilla/5.0"}, 
+        timeout=10, 
+        follow_redirects=True
+    )
+
+def test_stock_price_http_failure():
+    # Simulate a connection failure
+    url = "https://finance.yahoo.com/quote/AAPL?p=AAPL"
+
+    # HTTP request error associated with the URL
+    request = httpx.Request("GET", url)
+    error = httpx.RequestError("Connection failed", request=request)
+
+    # Replace httpx.get() with mock that raises simulated error
+    with patch(
+        "web_programming.current_stock_price.httpx.get", 
+        side_effect=error
+    ) as mock_get:
+        with pytest.raises(httpx.RequestError):
+            stock_price("AAPL")
 
     mock_get.assert_called_once_with(
         "https://finance.yahoo.com/quote/AAPL?p=AAPL",
