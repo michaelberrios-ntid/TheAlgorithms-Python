@@ -6,11 +6,11 @@ All tests are unit tests.
 
 ## Metrics
 
-2883 Tests Passed
+2907 Tests Passed
 3 Tests Failed
-2 Warnings
 
-70% Code Coverage (Statement Coverage)
+
+71% Code Coverage (Statement Coverage)
 
 ### Notes
 Seemingly, the goal of testing is to ensure that the implementation of each algorithm provides the intended result.

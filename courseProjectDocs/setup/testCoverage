@@ -1,5 +1,5 @@
-======================================================================== tests coverage ========================================================================
-_______________________________________________________ coverage: platform win32, python 3.14.7-final-0 ________________________________________________________
+=========================================================================== tests coverage ============================================================================
+___________________________________________________________ coverage: platform win32, python 3.14.7-final-0 ___________________________________________________________
 
 Name                                                                          Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------------------------------------------------
@@ -47,7 +47,6 @@ searches\simulated_annealing.py                                                 
 data_compression\lempel_ziv_decompress.py                                        63     55    13%   14-24, 32-54, 62-81, 89-97, 104-107, 111
 graphs\scc_kosaraju.py                                                           39     34    13%   6-11, 16-21, 26-35, 40-54
 file_transfer\receive_file.py                                                    20     17    15%   5-23, 27
-graphs\graph_adjacency_matrix.py                                                260    221    15%   44-59, 67-88, 95-116, 123-133, 141-161, 169, 177-189, 195-196, 199-201, 211-213, 221-223, 231-232, 240-241, 246-260, 265-287, 290-309, 312-325, 328-347, 352-371, 376-408, 414-442, 448-463, 469-483, 488-517, 522-533, 536-548, 551-562, 565-586, 589-605, 609
 data_compression\lempel_ziv.py                                                   66     56    15%   15-25, 34-41, 49-71, 79-83, 91-110, 118-121, 125
 ciphers\rsa_cipher.py                                                            92     78    15%   13-21, 27-36, 42-47, 56-60, 64-67, 76-90, 94-112, 116-145, 149
 machine_learning\sequential_minimum_optimization.py                             322    272    16%   58-75, 79-140, 144-159, 163-168, 173-177, 187-193, 197-203, 207-217, 221-224, 236-261, 273-299, 303-373, 377-383, 386, 389, 393, 397, 401, 406-411, 414, 417, 420, 423-424, 427-428, 431, 434, 439-444, 451-502, 507-524, 528-544, 548-564, 577-611, 620-622
@@ -460,7 +459,7 @@ sorts\double_sort.py                                                            
 sorts\quick_sort.py                                                              14      3    79%   48-52
 sorts\unknown_sort.py                                                            14      3    79%   38-40
 strings\pig_latin.py                                                             14      3    79%   42-44
-searches\binary_search.py                                                       118     25    79%   201, 238, 272, 344, 346, 385, 395, 408-434
+searches\binary_search.py                                                       118     25    79%   201, 238, 272, 364, 366, 405, 415, 428-454
 conversions\length_conversion.py                                                 19      4    79%   117-121, 130-132
 graphs\random_graph_generator.py                                                 19      4    79%   33, 36, 65-67
 hashes\luhn.py                                                                   19      4    79%   39-43
@@ -850,6 +849,7 @@ graphs\minimum_spanning_tree_prims2.py                                          
 linear_algebra\src\conjugate_gradient.py                                         56      4    93%   149, 177-180
 maths\sin.py                                                                     14      1    93%   64
 strings\detecting_english_programmatically.py                                    28      2    93%   60-62
+data_structures\heap\binomial_heap.py                                           171     12    93%   139, 141-144, 292-294, 368, 391, 399-401
 networking_flow\push_relabel.py                                                  57      4    93%   61, 100, 160-162
 cellular_automata\nagel_schrekenberg.py                                          43      3    93%   104, 138-140
 data_structures\binary_tree\serialize_deserialize_binary_tree.py                 43      3    93%   24, 138-140
@@ -893,7 +893,6 @@ other\lfu_cache.py                                                              
 data_structures\kd_tree\tests\test_kdtree.py                                     37      2    95%   106-108
 data_structures\linked_list\deque_doubly.py                                      56      3    95%   23, 72, 84
 data_structures\binary_tree\distribute_coins.py                                  38      2    95%   135-137
-data_structures\heap\binomial_heap.py                                           171      9    95%   139, 141-144, 368, 391, 399-401
 maths\special_numbers\harshad_numbers.py                                         38      2    95%   164-166
 searches\median_of_medians.py                                                    38      2    95%   81, 96
 data_structures\linked_list\doubly_linked_list_two.py                           116      6    95%   25, 33, 117, 139, 261-263
@@ -932,6 +931,7 @@ graphs\johnson.py                                                               
 knapsack\tests\test_knapsack.py                                                  33      1    97%   63
 strings\suffix_automaton.py                                                      67      2    97%   175-177
 ciphers\decrypt_caesar_with_chi_squared.py                                       37      1    97%   165
+graphs\graph_adjacency_matrix.py                                                260      7    97%   195-196, 199-201, 266, 609
 maths\prime_check.py                                                             38      1    97%   90
 data_structures\binary_tree\diff_views_of_binary_tree.py                         78      2    97%   208-210
 dynamic_programming\viterbi.py                                                   78      2    97%   375-377
@@ -944,6 +944,6 @@ geometry\geometry.py                                                            
 maths\primelib.py                                                               182      2    99%   839-841
 linear_algebra\src\test_linear_algebra.py                                       101      1    99%   212
 -----------------------------------------------------------------------------------------------------------
-TOTAL                                                                         35635  10616    70%
+TOTAL                                                                         35684  10405    71%
 
-146 files skipped due to complete coverage.
+148 files skipped due to complete coverage.
