@@ -10,7 +10,7 @@ The `stock_price()` function retrieves stock prices from Yahoo Finance using HTT
 
 ### Test Results Before Mocking
 ```bash
-uv run python -m pytest \
+uv run --group test python -m pytest \
   --doctest-modules web_programming/current_stock_price.py \
   --cov=web_programming.current_stock_price \
   --cov-report=term-missing \
@@ -32,6 +32,7 @@ uv run python -m pytest \
 Four unit tests were implemented in `web_programming/tests/test_current_stock_price_mock.py`
 
 The test cases were developed by examining the source code using white-box testing to identify the function's conditional statements, return paths, input parameters, and external dependencies. We identified the following scenarios to test:
+
 | Category | What? |
 | -------- | ------- |
 | Input | **symbol**, a string defaulting to "AAPL" |
@@ -59,12 +60,12 @@ Before and after metrics were collected and stored in `courseProjectDocs/Unit-Te
 
 ## Test Results After Mocking
 ```bash
-uv run python -m pytest web_programming/tests/test_current_stock_price_mock.py \
-    --cov=web_programming.current_stock_price \
-    --cov-report=term-missing \
-    --cov-report=html:htmlcov/mocking \
-    -v \
-    -vv
+uv run --group test python -m pytest \
+  web_programming/tests/test_current_stock_price_mock.py \
+  --cov=web_programming.current_stock_price \
+  --cov-report=term-missing \
+  --cov-report=html:htmlcov/mocking \
+  -v
 ```
 
 | Metric | Before Mocking | After Mocking |
