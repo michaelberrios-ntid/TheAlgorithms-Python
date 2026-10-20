@@ -1,0 +1,33 @@
+uv run python -m pytest   web_programming/tests/test_current_stock_price_mock.py   --cov=web_programming.current_stock_price   --cov-report=term-missing   --cov-report=html:htmlcov/mocking   -v
+
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-9.1.1, pluggy-1.6.0 -- /home/mberrios/code/swen-777/TheAlgorithms-Python/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/mberrios/code/swen-777/TheAlgorithms-Python
+configfile: pyproject.toml
+plugins: cov-7.1.0, anyio-4.14.2
+collecting ... collected 4 items
+
+web_programming/tests/test_current_stock_price_mock.py::test_stock_price_success PASSED [ 25%]
+web_programming/tests/test_current_stock_price_mock.py::test_stock_price_missing_element PASSED [ 50%]
+web_programming/tests/test_current_stock_price_mock.py::test_stock_price_default_symbol PASSED [ 75%]
+web_programming/tests/test_current_stock_price_mock.py::test_stock_price_http_failure PASSED [100%]
+
+=============================== warnings summary ===============================
+<frozen importlib._bootstrap>:491
+  <frozen importlib._bootstrap>:491: RuntimeWarning: The global interpreter lock (GIL) has been enabled to load module 'lxml.etree', which has not declared that it can run safely without the GIL. To override this behavior and keep the GIL disabled (at your own risk), run with PYTHON_GIL=0 or -Xgil=0.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                                     Stmts   Miss  Cover   Missing
+----------------------------------------------------------------------
+web_programming/current_stock_price.py      15      4    73%   43-48
+----------------------------------------------------------------------
+TOTAL                                       15      4    73%
+Coverage HTML written to dir htmlcov/mocking
+============================= slowest 10 durations =============================
+
+(10 durations < 0.005s hidden.  Use -vv to show these durations.)
+========================= 4 passed, 1 warning in 0.13s =========================
