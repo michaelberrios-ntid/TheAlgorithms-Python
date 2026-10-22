@@ -1,0 +1,1 @@
+# Implementation details and decisions for mocked tests can be found in `mocking` directory.
