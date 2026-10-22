@@ -26,7 +26,7 @@ uv run --group test python -m pytest \
 Author: Michael Berrios
 
 ## Unit Testing I - Doctests and Coverage
-Test cases, mocking strategy, and coverage analysis are documented in [mocking.md](mocking-current-stock-price.md)
+Test cases, mocking strategy, and coverage analysis are documented in [mocking.md](mocking/mocking-current-stock-price.md)
 
 ### To run tests for Binary to Decimal
 ```bash
@@ -56,4 +56,13 @@ uv run --group test python -m pytest \
   --cov-report=term-missing \
   --cov-report=html:htmlcov/mocking \
   -v
+```
+
+### To run tests for Random Anime Character
+```bash
+$ uv run --group test python -m pytest  \
+ web_programming/tests/test_random_anime_character.py \
+  --cov=web_programming.random_anime_character  \
+  --cov-report=term-missing \
+  --cov-report=html:htmlcov/mocking   -v
 ```

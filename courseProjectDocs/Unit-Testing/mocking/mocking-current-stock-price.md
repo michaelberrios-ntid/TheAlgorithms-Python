@@ -1,9 +1,9 @@
-# Unit Testing II - Mocking and Stubbing
+[# Unit Testing II - Mocking and Stubbing
 Author: Michael Berrios
 
 ## Selected Component
 File: web_programming/current_stock_price.py
-
+]()
 Function: stock_price()
 
 The `stock_price()` function retrieves stock prices from Yahoo Finance using HTTP requests. This component was selected because it depends on an external service, which can affect test reliability and execution time. Mocking and stubbing allow us to test the function without making actual HTTP requests.

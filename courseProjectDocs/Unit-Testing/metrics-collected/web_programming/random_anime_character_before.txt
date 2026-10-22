@@ -1,0 +1,22 @@
+$ uv run python -m pytest \
+  --doctest-modules web_programming/random_anime_character.py \
+  --cov=web_programming.random_anime_character \
+  --cov-report=term-missing \
+  --cov-report=html:htmlcov/baseline
+========================================================================= test session starts =========================================================================
+platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\danar\PycharmProjects\swen-777 QA\PythonAlgorithms
+configfile: pyproject.toml
+plugins: anyio-4.14.2, cov-7.1.0
+collected 0 items
+
+=========================================================================== tests coverage ============================================================================
+___________________________________________________________ coverage: platform win32, python 3.14.7-final-0 ___________________________________________________________
+
+Name                                        Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------------
+web_programming\random_anime_character.py      23     14    39%   24-26, 33-43, 47-48
+-------------------------------------------------------------------------
+TOTAL                                          23     14    39%
+Coverage HTML written to dir htmlcov/baseline
+======================================================================== no tests ran in 0.49s ========================================================================
