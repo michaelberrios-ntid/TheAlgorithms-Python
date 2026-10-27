@@ -60,7 +60,7 @@ uv run --group test python -m pytest \
 
 ### To run tests for Random Anime Character
 ```bash
-$ uv run --group test python -m pytest  \
+uv run --group test python -m pytest  \
  web_programming/tests/test_random_anime_character.py \
   --cov=web_programming.random_anime_character  \
   --cov-report=term-missing \
