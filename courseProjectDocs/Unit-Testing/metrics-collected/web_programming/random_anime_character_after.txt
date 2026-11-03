@@ -1,0 +1,25 @@
+$ uv run --group test python -m pytest   web_programming/tests/test_random_anime_character.py   --cov=web_programming.random_anime_character   --cov-report=term-missing   --cov-report=html:htmlcov/mocking   -v
+========================================================================= test session starts =========================================================================
+platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\danar\PycharmProjects\swen-777 QA\PythonAlgorithms\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\danar\PycharmProjects\swen-777 QA\PythonAlgorithms
+configfile: pyproject.toml
+plugins: anyio-4.14.2, cov-7.1.0
+collected 2 items
+
+web_programming/tests/test_random_anime_character.py::test_save_image PASSED                                                                                     [ 50%]
+web_programming/tests/test_random_anime_character.py::test_random_anime_character PASSED                                                                         [100%]
+
+=========================================================================== tests coverage ============================================================================
+___________________________________________________________ coverage: platform win32, python 3.14.7-final-0 ___________________________________________________________
+
+Name                                        Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------------
+web_programming\random_anime_character.py      23      2    91%   47-48
+-------------------------------------------------------------------------
+TOTAL                                          23      2    91%
+Coverage HTML written to dir htmlcov/mocking
+======================================================================== slowest 10 durations =========================================================================
+
+(6 durations < 0.005s hidden.  Use -vv to show these durations.)
+========================================================================== 2 passed in 0.24s =========================================================================
