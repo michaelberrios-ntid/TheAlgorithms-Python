@@ -226,6 +226,12 @@ report.omit = [
 report.sort = "Cover"
 
 [tool.mutmut]
-source_paths = [ "web_programming/random_anime_character.py" ]
-pytest_add_cli_args_test_selection= [ "tests/test_random_anime_character_mutant.py" ]
+source_paths = ["web_programming/random_anime_character.py"]
+also_copy = [
+    "web_programming/tests"
+]
+pytest_add_cli_args_test_selection = [
+    "web_programming/tests/test_random_anime_character.py"
+]
 pytest_command = "python -m pytest"
+

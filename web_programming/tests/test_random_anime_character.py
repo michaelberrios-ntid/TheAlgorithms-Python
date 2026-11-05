@@ -18,6 +18,7 @@ TEST_IMAGE_DESCRIPTION = "A small pirate in a straw hat with big dreams"
 @patch("web_programming.random_anime_character.httpx.get")
 @patch("builtins.open", new_callable=mock_open)
 def test_save_image(file_open, httpx_get):
+
     fake_image = Mock()
     fake_image.content = TEST_IMAGE_DESCRIPTION
     httpx_get.return_value = fake_image
@@ -27,6 +28,10 @@ def test_save_image(file_open, httpx_get):
 
     sut.save_image(TEST_IMAGE_URL, TEST_IMAGE_TITLE)
     httpx_get.assert_called_once_with(TEST_IMAGE_URL, headers = ANY, timeout = ANY)
+    args, kwargs = httpx_get.call_args
+
+    assert kwargs.get("headers") is not None
+    assert kwargs.get("timeout") is not None
 
     file_open.assert_called_once_with(TEST_IMAGE_TITLE, "wb")
     file_open().write.assert_called_once_with(TEST_IMAGE_DESCRIPTION)
@@ -74,7 +79,17 @@ def test_random_anime_character(os_path_splittext, beautiful_soup,httpx_get,save
     title, description, image_title = sut.random_anime_character()
 
     beautiful_soup.assert_called_once()
+    soup_args , _ = beautiful_soup.call_args
+    assert soup_args
+    assert soup_args[0] == ANY
+    assert soup_args[1] == "html.parser"
     httpx_get.assert_called_once()
+    httpx_args, httpx_kwargs = httpx_get.call_args
+    assert httpx_kwargs.get("headers") is not None
+    assert httpx_kwargs.get("timeout") is not None
+    assert httpx_args
+    assert httpx_args[0] is not None
+
     fake_soup.find.call_count == 3
     assert title == TEST_IMAGE_TITLE
     assert description == TEST_IMAGE_DESCRIPTION
