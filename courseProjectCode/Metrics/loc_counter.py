@@ -28,7 +28,7 @@ for file_path in root_repository.rglob("*.py"):
     loc = 0
     comments = 0
 
-    with open(file_path, "r", encoding="utf-8") as file:
+    with open(file_path, encoding="utf-8") as file:
         for line in file:
             if line.strip():
                 loc += 1

@@ -1,9 +1,4 @@
-import os.path
-from unittest.mock import Mock, patch, ANY, mock_open
-
-import pytest
-import httpx
-from bs4 import BeautifulSoup
+from unittest.mock import ANY, Mock, mock_open, patch
 
 import web_programming.random_anime_character as sut
 

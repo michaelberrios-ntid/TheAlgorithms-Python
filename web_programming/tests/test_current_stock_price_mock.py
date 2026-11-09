@@ -1,9 +1,10 @@
 from unittest.mock import Mock, patch
 
+import httpx
+import pytest
+
 from web_programming.current_stock_price import stock_price
 
-import pytest
-import httpx
 
 def test_stock_price_success():
     html = '<html><span data-testid="qsp-price">228.43</span></html>'
@@ -58,8 +59,8 @@ def test_stock_price_default_symbol():
 
     mock_get.assert_called_once_with(
         "https://finance.yahoo.com/quote/AAPL?p=AAPL",
-        headers={"USER-AGENT": "Mozilla/5.0"}, 
-        timeout=10, 
+        headers={"USER-AGENT": "Mozilla/5.0"},
+        timeout=10,
         follow_redirects=True
     )
 
@@ -73,15 +74,14 @@ def test_stock_price_http_failure():
 
     # Replace httpx.get() with mock that raises simulated error
     with patch(
-        "web_programming.current_stock_price.httpx.get", 
+        "web_programming.current_stock_price.httpx.get",
         side_effect=error
-    ) as mock_get:
-        with pytest.raises(httpx.RequestError):
-            stock_price("AAPL")
+    ) as mock_get, pytest.raises(httpx.RequestError):
+        stock_price("AAPL")
 
     mock_get.assert_called_once_with(
         "https://finance.yahoo.com/quote/AAPL?p=AAPL",
-        headers={"USER-AGENT": "Mozilla/5.0"}, 
-        timeout=10, 
+        headers={"USER-AGENT": "Mozilla/5.0"},
+        timeout=10,
         follow_redirects=True
     )

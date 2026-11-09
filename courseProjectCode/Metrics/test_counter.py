@@ -18,7 +18,7 @@ for file_path in root_repository.rglob("*.py"):
 
     total_test_files += 1
 
-    with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
+    with open(file_path, encoding="utf-8", errors="ignore") as file:
         source = file.read()
 
     try:
@@ -27,10 +27,7 @@ for file_path in root_repository.rglob("*.py"):
         continue
 
     for node in ast.walk(tree):
-        if isinstance(node, ast.FunctionDef) and node.name.startswith("test_"):
-            total_test_cases += 1
-
-        elif isinstance(node, ast.AsyncFunctionDef) and node.name.startswith("test_"):
+        if (isinstance(node, ast.FunctionDef) and node.name.startswith("test_")) or (isinstance(node, ast.AsyncFunctionDef) and node.name.startswith("test_")):
             total_test_cases += 1
 
 # Output formatting
