@@ -63,6 +63,7 @@ quantum = [
   "qiskit>=2",
 ]
 dev = [
+    "ruff>=0.17.4",
     "mutmut>=3.8.1",
 ]
 
