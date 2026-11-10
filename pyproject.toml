@@ -64,6 +64,7 @@ quantum = [
 ]
 dev = [
     "ruff>=0.17.4",
+    "mutmut>=3.8.1",
 ]
 
 [tool.ruff]
@@ -224,3 +225,14 @@ report.omit = [
   "project_euler/*",
 ]
 report.sort = "Cover"
+
+[tool.mutmut]
+source_paths = ["web_programming/random_anime_character.py"]
+also_copy = [
+    "web_programming/tests"
+]
+pytest_add_cli_args_test_selection = [
+    "web_programming/tests/test_random_anime_character.py"
+]
+pytest_command = "python -m pytest"
+
