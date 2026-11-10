@@ -34,6 +34,7 @@ dependencies = [
 [dependency-groups]
 dev = [
   "mutmut>=3.8.1",
+  "ruff>=0.17.4",
 ]
 test = [
   "pytest>=8.4.1",
@@ -226,19 +227,7 @@ report.omit = [
 report.sort = "Cover"
 
 [tool.mutmut]
-source_paths = [ 
-  "web_programming/random_anime_character.py", 
-  "conversions/binary_to_decimal.py" 
-]
-
-also_copy = [ 
-  "web_programming/tests", 
-  "conversions/tests" 
-]
-
-pytest_add_cli_args_test_selection = [
-  "web_programming/tests/test_random_anime_character.py",
-  "conversions/tests/test_binary_to_decimal.py"
-]
-
+source_paths = [ "web_programming/random_anime_character.py" ]
+also_copy = [ "web_programming/tests" ]
+pytest_add_cli_args_test_selection = [ "web_programming/tests/test_random_anime_character.py" ]
 pytest_command = "python -m pytest"

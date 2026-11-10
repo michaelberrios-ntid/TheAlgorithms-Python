@@ -74,6 +74,9 @@ target/
 
 # pyenv
 
+# mutmut
+mutants/
+
 # celery beat schedule file
 celerybeat-schedule
 

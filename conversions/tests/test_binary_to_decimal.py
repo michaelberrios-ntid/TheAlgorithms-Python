@@ -24,6 +24,7 @@ def test_standalone_negative_sign():
     with pytest.raises(ValueError, match="Non-binary value"):
         bin_to_decimal("-")
 
+
 # Additional Tests for Kill Surviving Mutants
 def test_empty_string_error_message():
     with pytest.raises(ValueError) as exc_info:
