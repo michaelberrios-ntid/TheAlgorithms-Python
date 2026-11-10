@@ -140,6 +140,7 @@ uv run --with=pytest-run-parallel pytest \
   --ignore-gil-enabled \
   --ignore=courseProjectDocs \
   --ignore=courseProjectCode \
+  --ignore=mutants \
   --ignore=computer_vision/cnn_classification.py \
   --ignore=computer_vision/flip_augmentation.py \
   --ignore=computer_vision/harris_corner.py \
