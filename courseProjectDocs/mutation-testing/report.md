@@ -1,6 +1,6 @@
 # Mutation Test Report
 
-author: Daniel Arcega
+authors: Daniel Arcega (web_programming/), Michael Berrios (conversions/)
 
 ## Mutation Tool: mutmut
 Since TheAlgorithms-Python did not utilize mutation testing before, we had the ability to choose which framework to use.
