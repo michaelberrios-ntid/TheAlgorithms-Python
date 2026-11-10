@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.14"
 resolution-markers = [
     "python_full_version >= '3.15' and sys_platform == 'win32'",
@@ -1260,7 +1260,7 @@ wheels = [
 
 [[package]]
 name = "qiskit"
-version = "2.6.2"
+version = "2.6.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "dill" },
@@ -1756,8 +1756,8 @@ cv = [
     { name = "opencv-python" },
 ]
 dev = [
-    { name = "ruff" },
     { name = "mutmut" },
+    { name = "ruff" },
 ]
 docs = [
     { name = "myst-parser" },
@@ -1801,8 +1801,10 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 cv = [{ name = "opencv-python", specifier = ">=4.10.0.84" }]
-dev = [{ name = "ruff", specifier = ">=0.17.4" }]
-dev = [{ name = "mutmut", specifier = ">=3.8.1" }]
+dev = [
+    { name = "mutmut", specifier = ">=3.8.1" },
+    { name = "ruff", specifier = ">=0.17.4" },
+]
 docs = [
     { name = "myst-parser", specifier = ">=4" },
     { name = "sphinx", specifier = ">=8.2" },
