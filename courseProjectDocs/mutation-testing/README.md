@@ -4,7 +4,7 @@ author: Daniel Arcega
 
 ## Steps to run mutation testing
 ### 1. Ensure mutmut is installed on your version of the repository.
-```bash 
+```bash
    uv add --dev mutmut
    uv sync
 ```
