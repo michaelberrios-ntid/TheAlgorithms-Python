@@ -23,3 +23,22 @@ def test_internal_whitespace():
 def test_standalone_negative_sign():
     with pytest.raises(ValueError, match="Non-binary value"):
         bin_to_decimal("-")
+
+
+# Additional Tests for Kill Surviving Mutants
+def test_empty_string_error_message():
+    with pytest.raises(ValueError) as exc_info:
+        bin_to_decimal("")
+
+    assert str(exc_info.value) == "Empty string was passed to the function"
+
+
+def test_invalid_character_error_message():
+    with pytest.raises(ValueError) as exc_info:
+        bin_to_decimal("10X1")
+
+    assert str(exc_info.value) == "Non-binary value was passed to the function"
+
+
+def test_negative_binary_conversion():
+    assert bin_to_decimal("-101") == -5
