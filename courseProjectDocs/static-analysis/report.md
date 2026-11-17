@@ -23,6 +23,7 @@ By default, Ruff will ingore files dictated in .gitignore
 | Total Errors | Fixable | Unsafe Fixes |
 |--------------|---------|--------------|
 | 42           | 19      | 2            |
+
 Fixable errors are those that can be fixed with `--fix`.
 Unsafe fixes must be fixed with `--fix --unsafe-fixes`
 
