@@ -27,9 +27,11 @@ def test_stock_price_success():
     )
 
 def test_stock_price_missing_element():
-    # Create HTML that does not contain the expected <span> element with data-testid="qsp-price"
-    # Simulates stock price information is unavaialble
-    html = "<html><body><p>Stock information unavaialble</p></body></html>"
+    # Create HTML that does not contain the expected <span> element
+    # with data-testid="qsp-price"
+
+    # Simulates stock price information is unavailable
+    html = "<html><body><p>Stock information unavailable</p></body></html>"
 
     mock_response = Mock()
     mock_response.text = html
@@ -39,7 +41,9 @@ def test_stock_price_missing_element():
     ) as mock_get:
         result = stock_price("AAPL")
 
-    assert result == ("No <fin-streamer> tag with the specified data-testid attribute found.")
+    assert result == (
+        "No <fin-streamer> tag with the specified data-testid attribute found."
+    )
 
     mock_get.assert_called_once()
 
