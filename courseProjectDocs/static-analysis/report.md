@@ -11,7 +11,10 @@ Install Ruff with:
 
 Run Ruff with:
 
-    uv run Ruff check .
+```bash
+uv run ruff check .
+```
+
 This will check every file in the repository. 
 Replace the '.' with whichever directory you want to specifically test.
 By default, Ruff will ingore files dictated in .gitignore
@@ -50,3 +53,35 @@ maths/zellers_congruence.py
 web_programming/tests/test_current_stock_price_mock.py
 web_programming/tests/test_random_anime_character.py
 ```
+
+# Static Analysis
+author: Michael Berrios
+
+B015: Pointless Comparison
+
+Ruff identified a B015 code smell in `web_programming/tests/test_random_anime_character.py` at line 88.
+
+The original code was:
+
+```python
+fake_soup.find.call_count == 3
+```
+
+This statement compares the number of calls to find() against the expected value of 3. However, without an assert statement, Python evaluates the comparison and discards the result. Consequently, the test could pass even if the number of calls was incorrect.
+
+The statement was corrected to:
+
+```python
+assert fake_soup.find.call_count == 3
+```
+
+This ensures that pytest will fail the test if find() is not called exactly three times.
+
+Verification
+
+The unit tests were executed before and after the correction using:
+
+```python
+uv run --group test python -m pytest web_programming/tests/test_random_anime_character.py -v
+```
+Both executions passed. However, the corrected test now enforces the expected call count rather than evaluating an unused comparison.

@@ -85,7 +85,7 @@ def test_random_anime_character(os_path_splittext, beautiful_soup,httpx_get,save
     assert httpx_args
     assert httpx_args[0] is not None
 
-    fake_soup.find.call_count == 3
+    assert fake_soup.find.call_count == 3
     assert title == TEST_IMAGE_TITLE
     assert description == TEST_IMAGE_DESCRIPTION
     assert image_title == TEST_IMAGE_FILE_TITLE
