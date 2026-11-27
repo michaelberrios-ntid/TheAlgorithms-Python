@@ -33,8 +33,11 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+  "ipykernel>=7.4.0",
+  "jupyter>=1.1.1",
   "mutmut>=3.8.1",
   "ruff>=0.17.4",
+  "tabulate>=0.10.0",
 ]
 test = [
   "pytest>=8.4.1",
