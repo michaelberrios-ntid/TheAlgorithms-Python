@@ -2815,6 +2815,7 @@ cv = [
     { name = "opencv-python" },
 ]
 dev = [
+    { name = "ipykernel" },
     { name = "jupyter" },
     { name = "mutmut" },
     { name = "ruff" },
@@ -2863,6 +2864,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 cv = [{ name = "opencv-python", specifier = ">=4.10.0.84" }]
 dev = [
+    { name = "ipykernel", specifier = ">=7.4.0" },
     { name = "jupyter", specifier = ">=1.1.1" },
     { name = "mutmut", specifier = ">=3.8.1" },
     { name = "ruff", specifier = ">=0.17.4" },
