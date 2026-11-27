@@ -24,14 +24,16 @@ Algorithm modules were imported with a 100% success rate. All methods were run w
 
 Of the 17 sorting methods, 16 methods correctly sorted all arrays. `comb_sort` was the lone outlier, resulting in a **94%** rate of success.
 
-### Reproduction
+### How to run `sorting_comparison`
 1. Ensure jupyter is installed on your repository
 ```
 uv add --dev jupyter
 ```
-2. Run jupyter server
+2. Open `sorting_comparison.ipynb`
+3. Run jupyter server
 ```angular2html
 uv run --with jupyter jupyter lab
 ```
-3. Attach the notebook to the kernel (various methods avaiable)
-4. Run all cells
+
+4. Attach the notebook to the kernel (various methods avaiable)
+5. Run all cells
